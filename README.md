@@ -37,3 +37,6 @@ This will configure:
 - minikube addons => heapster, dashboard, ingress, logviewer
 - k8s cluster => RBAC for Helm & Dashboard
 - add VS Code extensions from [bin/vscode-extensions-list.txt](bin/vscode-extensions-list.txt)
+
+Final touches:
+- download [Pharo Smalltalk](https://pharo.org) to $HOME/Pharo
