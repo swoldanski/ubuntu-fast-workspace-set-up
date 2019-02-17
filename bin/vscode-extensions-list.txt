@@ -1,0 +1,6 @@
+ms-kubernetes-tools.vscode-kubernetes-tools
+ms-python.python
+ms-vscode.Go
+PeterJausovec.vscode-docker
+redhat.vscode-yaml
+eamodio.gitlens
