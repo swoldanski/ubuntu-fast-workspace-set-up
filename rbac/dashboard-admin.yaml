@@ -1,0 +1,27 @@
+# IMPORTANT: Make sure that you know what you are doing before proceeding.
+# Granting admin privileges to Dashboard's Service Account might be a security risk.
+#
+# You can grant full admin privileges to Dashboard's Service Account by creating below ClusterRoleBinding.
+# Copy the YAML file based on chosen installation method and save as, i.e. dashboard-admin.yaml.
+# Use kubectl create -f dashboard-admin.yaml to deploy it.
+# Afterwards you can use Skip option on login page to access Dashboard.
+#
+# kubectl create -f dashboard-admin.yaml
+#
+# To access dashboard use:
+# kubectl proxy & browse http://localhost:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy && fg
+#
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-dashboard
+  labels:
+    k8s-app: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: kubernetes-dashboard
+  namespace: kube-system
