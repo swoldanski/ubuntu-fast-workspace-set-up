@@ -6,7 +6,7 @@
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
 curl httpie python3 git
 
-python3 -m pip install pipenv
+pip install --user pipenv
 
 ssi="sudo snap install"
 ssic="${ssi} --classic"
