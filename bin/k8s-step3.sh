@@ -35,18 +35,27 @@ helm init --upgrade --service-account tiller
 echo "######################################"
 echo "Installing skaffold"
 echo "######################################"
-curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/${SKAFFOLD_VER:-v0.23.0}/skaffold-linux-amd64
+curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/${SKAFFOLD_VER:-v0.22.0}/skaffold-linux-amd64
   chmod +x skaffold
   sudo mv skaffold /usr/local/bin
 
 echo "######################################"
 echo "Installing k9s"
 echo "######################################"
-curl -Lo k9s.tar.gz https://github.com/derailed/k9s/releases/download/${K9S_VER:-0.1.3}/k9s_${K9S_VER:-0.1.3}_Linux_x86_64.tar.gz
+curl -Lo k9s.tar.gz https://github.com/derailed/k9s/releases/download/${K9S_VER:-0.4.1}/k9s_${K9S_VER:-0.4.1}_Linux_x86_64.tar.gz
   tar -zxf k9s.tar.gz k9s
   chmod +x k9s
   sudo mv k9s /usr/local/bin
   rm k9s.tar.gz
+
+echo "######################################"
+echo "Installing kubefwd"
+echo "######################################"
+curl -Lo kubefwd.tar.gz https://github.com/txn2/kubefwd/releases/download/${KUBEFWD_VER:-1.8.0}/kubefwd_linux_amd64.tar.gz
+  tar -zxf kubefwd.tar.gz kubefwd
+  chmod +x kubefwd
+  sudo mv kubefwd /usr/local/bin
+  rm kubefwd.tar.gz
 
 echo "######################################"
 echo "Installing stern"
@@ -59,5 +68,5 @@ echo "######################################"
 echo "Are we ready with kubernetes?"
 echo "######################################"
 
-which minikube kubectl helm skaffold k9s stern
+which minikube kubectl helm skaffold k9s stern kubefwd
 
