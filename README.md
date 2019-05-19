@@ -14,13 +14,15 @@ Remember to change component's [versions](./versions) before install.
 This will install:
 - curl 
 - httpie 
-- python3 
+- python3
+- pip3
+- ipython3 
 - git 
 - pipenv 
 - chromium
 - polar-bookshelf
 - go
-- vscode
+- code-insiders
 - node (edge channel version)
 - minikube
 - libvirt
