@@ -4,3 +4,4 @@ ms-vscode.Go
 PeterJausovec.vscode-docker
 redhat.vscode-yaml
 eamodio.gitlens
+ms-vscode-remote.vscode-remote-extensionpack

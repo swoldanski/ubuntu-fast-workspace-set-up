@@ -42,7 +42,7 @@ curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/${SKAFFOLD_VE
 echo "######################################"
 echo "Installing k9s"
 echo "######################################"
-curl -Lo k9s.tar.gz https://github.com/derailed/k9s/releases/download/${K9S_VER:-0.4.1}/k9s_${K9S_VER:-0.4.1}_Linux_x86_64.tar.gz
+curl -Lo k9s.tar.gz https://github.com/derailed/k9s/releases/download/${K9S_VER:-0.6.6}/k9s_${K9S_VER:-0.6.6}_Linux_x86_64.tar.gz
   tar -zxf k9s.tar.gz k9s
   chmod +x k9s
   sudo mv k9s /usr/local/bin
